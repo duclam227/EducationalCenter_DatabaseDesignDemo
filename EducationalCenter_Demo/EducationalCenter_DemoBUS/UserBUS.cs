@@ -38,7 +38,7 @@ namespace EducationalCenter_DemoBUS
         {
             int result = 1;
 
-            DataTable data = EducationalCenter_DemoDAO.UserDAO.Instance.CheckUser(username);
+            DataTable data = EducationalCenter_DemoDAO.UserDAO.CheckUser(username);
             string tmpName, tmpPass;
 
             if(data.Rows.Count == 0)

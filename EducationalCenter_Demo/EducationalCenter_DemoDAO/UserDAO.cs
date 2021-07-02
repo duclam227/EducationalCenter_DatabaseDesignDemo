@@ -23,7 +23,7 @@ namespace EducationalCenter_DemoDAO
             }
         }
 
-        public DataTable CheckUser(string username)
+        public static DataTable CheckUser(string username)
         {
             DataTable result = new DataTable();
 

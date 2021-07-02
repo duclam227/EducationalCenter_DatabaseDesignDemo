@@ -11,6 +11,6 @@ namespace EducationalCenter_DemoDAO
     public class DBConnect
     {
         static string connectionString = ConfigurationManager.ConnectionStrings["connectionString"].ConnectionString;
-        protected SqlConnection _conn = new SqlConnection(connectionString);
+        protected static SqlConnection _conn = new SqlConnection(connectionString);
     }
 }
