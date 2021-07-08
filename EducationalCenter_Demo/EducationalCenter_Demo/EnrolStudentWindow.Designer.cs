@@ -112,7 +112,6 @@ namespace EducationalCenter_Demo
             // 
             // ProgramComboBox
             // 
-            this.ProgramComboBox.DataSource = this.cTDAOTAOBindingSource;
             this.ProgramComboBox.DisplayMember = "MA_CTDT";
             this.ProgramComboBox.FormattingEnabled = true;
             this.ProgramComboBox.Location = new System.Drawing.Point(369, 405);
@@ -192,7 +191,7 @@ namespace EducationalCenter_Demo
         private System.Windows.Forms.TextBox PhoneTextBox;
         private System.Windows.Forms.Label label5;
         
-        private System.Windows.Forms.BindingSource cTDAOTAOBindingSource;
+        
         
     }
 }

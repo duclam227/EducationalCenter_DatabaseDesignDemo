@@ -37,10 +37,10 @@ namespace EducationalCenter_DemoDAO
 
                 return result;
             }
-            catch (Exception ex)
+            catch (Exception)
             {
                 return null;
-                _conn.Close();
+                //_conn.Close();
             }
 
         }

@@ -1,0 +1,53 @@
+﻿using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+using System.Data;
+using EducationalCenter_DemoDTO;
+
+namespace EducationalCenter_DemoBUS
+{
+    public class ClassBus
+    {
+        private static ClassBus _instance = null;
+        public static ClassBus Instance
+        {
+            get
+            {
+                if (_instance == null)
+                {
+                    _instance = new ClassBus();
+                }
+
+                return _instance;
+            }
+        }
+        public static List<ClassDTO> GetClass(string _id, string _program)
+        {
+            List<ClassDTO> result = new List<ClassDTO>();
+
+            DataTable data = EducationalCenter_DemoDAO.ClassDAO.GetClass(_id, _program);
+
+            foreach (DataRow row in data.Rows)
+            {
+                ClassDTO tmp = new ClassDTO();
+                tmp.IDSub = row["MAMH"].ToString();
+                tmp.NameSub = row["TENMONHOC"].ToString();
+                tmp.IDClass = row["MALOP"].ToString();
+                string tmpdate = row["NGAYBATDAU"].ToString();
+                tmp.StartDate = DateTime.Parse(tmpdate);
+                tmp.Room = row["PHONGHOC"].ToString();
+                tmp.ClassDate = row["LICH_HOC"].ToString();
+                tmp.MaxNumber = row["SISO_TOIDA"].ToString();
+                tmp.CurrentNumber = row["SISO"].ToString();
+                
+
+                //tmp.CheckBox = bool.Parse(false);
+
+                result.Add(tmp);
+            }
+            return result;
+        }
+    }
+}

@@ -121,5 +121,13 @@ namespace EducationalCenter_DemoBUS
 
             return result;
         }
+
+        public static string GetStudentProgram (StudentDTO _id)
+        {
+            string result;
+            DataTable dt = EducationalCenter_DemoDAO.StudentDAO.GetStudentProgram(_id);
+            result = dt.Rows[0][0].ToString();
+            return result;
+        }
     }
 }

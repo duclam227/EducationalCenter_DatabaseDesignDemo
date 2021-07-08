@@ -1,5 +1,4 @@
-﻿#pragma
-using System;
+﻿using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -9,6 +8,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using EducationalCenter_DemoBUS;
+using EducationalCenter_DemoDTO;
 using System.Data.SqlClient;
 
 
@@ -69,7 +69,9 @@ namespace EducationalCenter_Demo
                                         }
                                     case "HV":
                                         {
-                                            EnrollClassWindow enrol = new EnrollClassWindow (username);
+                                            StudentDTO _currentStudent = new StudentDTO();
+                                            _currentStudent.ID = username;
+                                            EnrollClassWindow enrol = new EnrollClassWindow (_currentStudent);
                                             enrol.ShowDialog(this);
                                             this.Show();
                                             return;

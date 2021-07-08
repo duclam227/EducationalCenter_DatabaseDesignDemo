@@ -144,5 +144,16 @@ namespace EducationalCenter_DemoDAO
 
             return result;
         }
+
+        public static DataTable GetStudentProgram (StudentDTO newstudent)
+        {
+            DataTable result = new DataTable();
+            string query = $"select MACTDT from GHIDANH " +
+                $"WHERE MAHV = '{newstudent.ID}' ORDER BY NGAYGHIDANH DESC";
+
+             SqlDataAdapter adapter = new SqlDataAdapter(query, _conn);
+             adapter.Fill(result);     
+             return result;
+        }
     }
 }
