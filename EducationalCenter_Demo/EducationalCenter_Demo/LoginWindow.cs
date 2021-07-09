@@ -30,33 +30,38 @@ namespace EducationalCenter_Demo
                 return;
             }
 
-            try
-            {
-                int userCheck = EducationalCenter_DemoBUS.UserBUS.Instance.CheckUser(username, password);
-                switch (userCheck)
-                {
-                    case -1:
-                        {
-                            MessageBox.Show("Sai mật khẩu!");
-                            return;
-                        }
-                    case 0:
-                        {
-                            MessageBox.Show("Không tồn tại tài khoản!");
-                            return;
-                        }
-                    case 1:
-                        {
-                            MessageBox.Show("Đăng nhập thành công!");
-                            //show màn hình
-                            return;
-                        }
-                }
-            }
-            catch (Exception ex)
-            {
-                MessageBox.Show(ex.Message);
-            }
+            this.Hide();
+            EnrolStudentWindow enrol = new EnrolStudentWindow();
+            enrol.ShowDialog(this);
+            this.Show();
+
+            //try
+            //{
+            //    int userCheck = EducationalCenter_DemoBUS.UserBUS.CheckUser(username, password);
+            //    switch (userCheck)
+            //    {
+            //        case -1:
+            //            {
+            //                MessageBox.Show("Sai mật khẩu!");
+            //                return;
+            //            }
+            //        case 0:
+            //            {
+            //                MessageBox.Show("Không tồn tại tài khoản!");
+            //                return;
+            //            }
+            //        case 1:
+            //            {
+            //                MessageBox.Show("Đăng nhập thành công!");
+            //                //show màn hình
+            //                return;
+            //            }
+            //    }
+            //}
+            //catch (Exception ex)
+            //{
+            //    MessageBox.Show(ex.Message);
+            //}
         }
 
         private void ForgotPasswordLinkLabel_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)

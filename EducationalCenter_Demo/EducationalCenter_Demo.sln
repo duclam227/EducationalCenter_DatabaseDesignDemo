@@ -9,6 +9,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "EducationalCenter_DemoDAO",
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "EducationalCenter_DemoBUS", "EducationalCenter_DemoBUS\EducationalCenter_DemoBUS.csproj", "{549032F9-3B47-4F29-A415-3900D2BB767C}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "EducationalCenter_DemoDTO", "EducationalCenter_DemoDTO\EducationalCenter_DemoDTO.csproj", "{997086D9-E53D-4831-BB50-003A62632C4F}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -27,6 +29,10 @@ Global
 		{549032F9-3B47-4F29-A415-3900D2BB767C}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{549032F9-3B47-4F29-A415-3900D2BB767C}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{549032F9-3B47-4F29-A415-3900D2BB767C}.Release|Any CPU.Build.0 = Release|Any CPU
+		{997086D9-E53D-4831-BB50-003A62632C4F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{997086D9-E53D-4831-BB50-003A62632C4F}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{997086D9-E53D-4831-BB50-003A62632C4F}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{997086D9-E53D-4831-BB50-003A62632C4F}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
