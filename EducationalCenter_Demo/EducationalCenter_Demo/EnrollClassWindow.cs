@@ -26,8 +26,9 @@ namespace EducationalCenter_Demo
             InitializeComponent();
             this.currentStudent = currentStudent;
             string program = EducationalCenter_DemoBUS.StudentBUS.GetStudentProgram(currentStudent);
-            //MessageBox.Show(program);
+            string _regisID = EducationalCenter_DemoBUS.RegistrationBUS.GetRegistrationID(currentStudent.ID);
             EnrollClass_DataGridview.DataSource = EducationalCenter_DemoBUS.ClassBus.GetClass(currentStudent.ID, program);
+            grv_ClassEnrollResult.DataSource = EducationalCenter_DemoBUS.RegistrationBUS.RegistrationDetail(_regisID);
         }
     
 
