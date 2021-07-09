@@ -71,7 +71,8 @@ namespace EducationalCenter_Demo
                                         {
                                             StudentDTO _currentStudent = new StudentDTO();
                                             _currentStudent.ID = username;
-                                            EnrollClassWindow enrol = new EnrollClassWindow (_currentStudent);
+                                            StudentView enrol = new StudentView(_currentStudent);
+                                            //EnrollClassWindow enrol = new EnrollClassWindow (_currentStudent);
                                             enrol.ShowDialog(this);
                                             this.Show();
                                             return;

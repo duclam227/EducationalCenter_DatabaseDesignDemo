@@ -49,5 +49,29 @@ namespace EducationalCenter_DemoBUS
             }
             return result;
         }
+
+        public static void EnrollClass (string _regisID, string _classID)
+        {
+            try
+            {
+                EducationalCenter_DemoDAO.ClassDAO.EnrollClass(_regisID, _classID);
+            }
+            catch (Exception)
+            {
+                //
+            }
+        }
+
+        public static void CancelClass (string _regisID, string _classID)
+        {
+            try
+            {
+                EducationalCenter_DemoDAO.ClassDAO.CancelClass(_regisID, _classID);
+            }
+            catch (Exception)
+            {
+                
+            }
+        }
     }
 }
