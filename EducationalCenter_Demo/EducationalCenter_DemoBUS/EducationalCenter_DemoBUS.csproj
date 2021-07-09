@@ -49,6 +49,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="TuitionPaymentBUS.cs" />
     <Compile Include="ClassBUS.cs" />
     <Compile Include="ProgramBUS.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />

@@ -77,6 +77,13 @@ namespace EducationalCenter_Demo
                                             this.Show();
                                             return;
                                         }
+                                    case "KT":
+                                        {
+                                            TuitionPaymentWindow enrol = new TuitionPaymentWindow(username);
+                                            enrol.ShowDialog(this);
+                                            this.Show();
+                                            return;
+                                        }
                                 }
                                 
                                 return;
