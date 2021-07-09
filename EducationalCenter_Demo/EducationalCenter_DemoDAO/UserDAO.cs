@@ -25,21 +25,26 @@ namespace EducationalCenter_DemoDAO
 
         public static DataTable CheckUser(string username)
         {
-            DataTable result = new DataTable();
-
-            string query = $"select * from Users where username = '{username}'";
-
             try
             {
+                DataTable result = new DataTable();
+                string query = $"select * from Users where username = '{username}'";
+
+                _conn.Open();
                 SqlDataAdapter adapter = new SqlDataAdapter(query, _conn);
                 adapter.Fill(result);
+                _conn.Close();
+
+                return result;
             }
-            catch (Exception ex)
+            catch (Exception)
             {
-                throw ex;
+                return null;
+                //_conn.Close();
             }
 
-            return result;
         }
+
+        
     }
 }

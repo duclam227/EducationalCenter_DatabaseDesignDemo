@@ -31,55 +31,55 @@ namespace EducationalCenter_Demo
 
         private void EnrolButton_Click(object sender, EventArgs e)
         {
-            string programID;
-
-            programID = ProgramComboBox.SelectedValue.ToString();
-
             StudentDTO newStudent = new StudentDTO();
-            newStudent.Name = NameTextBox.Text;
-            newStudent.Address = AddressTextBox.Text;
-            newStudent.Phone = PhoneTextBox.Text;
-            newStudent.DOB = BirthdayPicker.Value;
+            try 
+            { 
+                string programID;
+                programID = ProgramComboBox.SelectedValue.ToString();
+          
+                newStudent.Name = NameTextBox.Text;
+                newStudent.Address = AddressTextBox.Text;
+                newStudent.Phone = PhoneTextBox.Text;
+                newStudent.DOB = BirthdayPicker.Value;
 
-            if(newStudent.Name.Length == 0 || newStudent.Address.Length == 0 || newStudent.Phone.Length == 0)
-            {
-                MessageBox.Show("Bạn chưa nhập đủ thông tin!");
-                return;
-            }
-            try
-            {
-                int check = EducationalCenter_DemoBUS.StudentBUS.CheckExist(newStudent);
-
-                switch (check)
+                if (newStudent.Name.Length == 0 || newStudent.Address.Length == 0 || newStudent.Phone.Length == 0 || newStudent.DOB.ToString().Length == 0)
+                    MessageBox.Show("Bạn chưa nhập đủ thông tin");
+                else
                 {
-                    case 0:
-                        {
-                            //insert học viên
-                            EducationalCenter_DemoBUS.StudentBUS.AddStudent(newStudent);
-                            //insert ghi danh
-                            EducationalCenter_DemoBUS.ProgramBUS.EnrolStudent(newStudent, programID);
-                            break;
-                        }
-                    case 1:
-                        {
-                            //kiểm tra đăng ký ctdt này chưa
-                            newStudent.ID = EducationalCenter_DemoBUS.StudentBUS.GetID(newStudent);
-                            int checkProgram = EducationalCenter_DemoBUS.StudentBUS.CheckExist(newStudent, programID);
-                            if(checkProgram == 0)
+                    int check = EducationalCenter_DemoBUS.StudentBUS.CheckExist(newStudent);
+
+                    switch (check)
+                    {
+                        case 0:
                             {
+                                //insert học viên
+                                EducationalCenter_DemoBUS.StudentBUS.AddStudent(newStudent);
                                 //insert ghi danh
                                 EducationalCenter_DemoBUS.ProgramBUS.EnrolStudent(newStudent, programID);
+                                MessageBox.Show("Đăng ký thành công");
+                                break;
                             }
-                            else
+                        case 1:
                             {
-                                MessageBox.Show($"Học viên {newStudent.Name} đã đăng ký khóa học này rồi!");
+                                //kiểm tra đăng ký ctdt này chưa
+                                newStudent.ID = EducationalCenter_DemoBUS.StudentBUS.GetID(newStudent);
+                                int checkProgram = EducationalCenter_DemoBUS.StudentBUS.CheckExist(newStudent, programID);
+                                if (checkProgram == 0)
+                                {
+                                    //insert ghi danh
+                                    EducationalCenter_DemoBUS.ProgramBUS.EnrolStudent(newStudent, programID);
+                                }
+                                else
+                                {
+                                    MessageBox.Show($"Học viên {newStudent.Name} đã đăng ký khóa học này rồi!");
+                                }
+                                MessageBox.Show("Đăng ký thành công");
                                 return;
                             }
-                            break;
-                        }
-                }
+                    }
 
-                MessageBox.Show("Đăng ký thành công");
+                    
+                }
             }
             catch (Exception ex)
             {
@@ -88,6 +88,6 @@ namespace EducationalCenter_Demo
 
         }
 
-       
+        
     }
 }

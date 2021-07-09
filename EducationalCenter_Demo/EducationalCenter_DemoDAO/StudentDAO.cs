@@ -17,12 +17,16 @@ namespace EducationalCenter_DemoDAO
 
             try
             {
-                string query = $"select count(*) as ketqua from HOCVIEN where TENHV = N'{student.Name}' and DOB_HV = '{student.DOB}' and DIACHI_HV = N'{student.Address}'";
+                string query = $"select count(*) as ketqua from HOCVIEN " +
+                               $"where TENHV = N'{student.Name}'" +
+                               $" and DOB_HV = '{student.DOB}' and DIACHI_HV = N'{student.Address}'";
 
                 try
                 {
+                    _conn.Open();
                     SqlDataAdapter adapter = new SqlDataAdapter(query, _conn);
                     adapter.Fill(result);
+                    _conn.Close();
                 }
                 catch (Exception ex)
                 {
@@ -44,7 +48,8 @@ namespace EducationalCenter_DemoDAO
 
             try
             {
-                string query = $"select count(*) as ketqua from GHIDANH where MAHV = '{student.ID}' and MACTDT = '{program}'";
+                string query = $"select count(*) as ketqua from GHIDANH " +
+                    $"where MAHV = '{student.ID}' and MACTDT = '{program}'";
 
                 try
                 {
@@ -70,7 +75,9 @@ namespace EducationalCenter_DemoDAO
 
             try
             {
-                string query = $"select MAHV as ketqua from HOCVIEN where TENHV = N'{student.Name}' and DOB_HV = '{student.DOB}' and DIACHI_HV = N'{student.Address}'";
+                string query = $"select MAHV as ketqua from HOCVIEN " +
+                    $"where TENHV = N'{student.Name}' and DOB_HV = '{student.DOB}' " +
+                    $"and DIACHI_HV = N'{student.Address}'";
 
                 try
                 {
@@ -93,13 +100,15 @@ namespace EducationalCenter_DemoDAO
 
         public static void AddStudent(StudentDTO newStudent)
         {
-            string command = $"insert into HOCVIEN values('{newStudent.ID}', N'{newStudent.Name}', '{newStudent.DOB}', N'{newStudent.Address}', '{newStudent.Phone}', '{newStudent.ID}')";
+            string command = $"insert into HOCVIEN " +
+                $"values('{newStudent.ID}', N'{newStudent.Name}', '{newStudent.DOB}', N'{newStudent.Address}', '{newStudent.Phone}', '{newStudent.ID}')";
+
 
             try
             {
                 _conn.Open();
-                SqlCommand cmd = new SqlCommand(command, _conn);
-                cmd.ExecuteNonQuery();
+                SqlCommand cmd_a = new SqlCommand(command, _conn);
+                cmd_a.ExecuteNonQuery();
                 _conn.Close();
             }
             catch (Exception ex)
@@ -134,6 +143,17 @@ namespace EducationalCenter_DemoDAO
 
 
             return result;
+        }
+
+        public static DataTable GetStudentProgram (StudentDTO newstudent)
+        {
+            DataTable result = new DataTable();
+            string query = $"select MACTDT from GHIDANH " +
+                $"WHERE MAHV = '{newstudent.ID}' ORDER BY NGAYGHIDANH DESC";
+
+             SqlDataAdapter adapter = new SqlDataAdapter(query, _conn);
+             adapter.Fill(result);     
+             return result;
         }
     }
 }

@@ -32,7 +32,8 @@ namespace EducationalCenter_DemoDAO
 
         public static void EnrolStudent(StudentDTO newStudent, string program)
         {
-            string command = $"insert into GHIDANH values('{program}', '{newStudent.ID}', '{DateTime.Today}')";
+            string command = $"insert into GHIDANH " +
+                $"values('{program}', '{newStudent.ID}', '{DateTime.Today}')";
 
             try
             {
@@ -43,7 +44,7 @@ namespace EducationalCenter_DemoDAO
             }
             catch (Exception ex)
             {
-                _conn.Close();
+                //_conn.Close();
                 throw ex;
             }
 

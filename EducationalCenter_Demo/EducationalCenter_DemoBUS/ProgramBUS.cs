@@ -66,7 +66,8 @@ namespace EducationalCenter_DemoBUS
                     string tmpdate = row["THOIGIAN_KHAIGIANG"].ToString();
                     tmp.StartDate = DateTime.Parse(tmpdate);
 
-                    if (tmp.StartDate > DateTime.Today)
+
+                    if (tmp.StartDate <= DateTime.Today)
                     {
                         result.Add(tmp);
                     }

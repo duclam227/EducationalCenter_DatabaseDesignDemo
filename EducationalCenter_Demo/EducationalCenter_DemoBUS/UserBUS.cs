@@ -4,6 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Data;
+using System.Data.SqlClient;
 
 namespace EducationalCenter_DemoBUS
 {
@@ -34,7 +35,7 @@ namespace EducationalCenter_DemoBUS
         - 0: không có account
         - 1: đăng nhập thành công
          */
-        public int CheckUser(string username, string password)
+        public static int CheckUser(string username, string password)
         {
             int result = 1;
 
@@ -52,6 +53,7 @@ namespace EducationalCenter_DemoBUS
 
                 if(tmpPass == password)
                 {
+             
                     result = 1;
                 }
                 else
@@ -59,8 +61,13 @@ namespace EducationalCenter_DemoBUS
                     result = -1;
                 }
             }
+            return result;
+        }
 
-
+        public static string getUserType (string username)
+        {
+            DataTable data = EducationalCenter_DemoDAO.UserDAO.CheckUser(username);
+            string result = data.Rows[0]["type"].ToString();
 
             return result;
         }

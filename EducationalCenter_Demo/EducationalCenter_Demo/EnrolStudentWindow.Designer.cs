@@ -29,6 +29,7 @@ namespace EducationalCenter_Demo
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
@@ -46,9 +47,9 @@ namespace EducationalCenter_Demo
             // 
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(87, 35);
+            this.label1.Location = new System.Drawing.Point(98, 44);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(69, 20);
+            this.label1.Size = new System.Drawing.Size(80, 25);
             this.label1.TabIndex = 0;
             this.label1.Text = "Họ tên: ";
             // 
@@ -56,9 +57,9 @@ namespace EducationalCenter_Demo
             // 
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(87, 110);
+            this.label2.Location = new System.Drawing.Point(98, 138);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(88, 20);
+            this.label2.Size = new System.Drawing.Size(105, 25);
             this.label2.TabIndex = 1;
             this.label2.Text = "Ngày sinh:";
             // 
@@ -66,9 +67,9 @@ namespace EducationalCenter_Demo
             // 
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.Location = new System.Drawing.Point(87, 181);
+            this.label3.Location = new System.Drawing.Point(98, 226);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(61, 20);
+            this.label3.Size = new System.Drawing.Size(71, 25);
             this.label3.TabIndex = 2;
             this.label3.Text = "Địa chỉ";
             // 
@@ -76,49 +77,56 @@ namespace EducationalCenter_Demo
             // 
             this.label4.AutoSize = true;
             this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label4.Location = new System.Drawing.Point(87, 324);
+            this.label4.Location = new System.Drawing.Point(98, 405);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(174, 20);
+            this.label4.Size = new System.Drawing.Size(205, 25);
             this.label4.TabIndex = 3;
             this.label4.Text = "Chương trình đào tạo: ";
             // 
             // NameTextBox
             // 
             this.NameTextBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.NameTextBox.Location = new System.Drawing.Point(232, 32);
+            this.NameTextBox.Location = new System.Drawing.Point(261, 40);
+            this.NameTextBox.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.NameTextBox.Name = "NameTextBox";
-            this.NameTextBox.Size = new System.Drawing.Size(455, 26);
+            this.NameTextBox.Size = new System.Drawing.Size(511, 30);
             this.NameTextBox.TabIndex = 4;
             // 
             // AddressTextBox
             // 
             this.AddressTextBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.AddressTextBox.Location = new System.Drawing.Point(232, 178);
+            this.AddressTextBox.Location = new System.Drawing.Point(261, 222);
+            this.AddressTextBox.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.AddressTextBox.Name = "AddressTextBox";
-            this.AddressTextBox.Size = new System.Drawing.Size(455, 26);
+            this.AddressTextBox.Size = new System.Drawing.Size(511, 30);
             this.AddressTextBox.TabIndex = 5;
             // 
             // BirthdayPicker
             // 
             this.BirthdayPicker.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.BirthdayPicker.Location = new System.Drawing.Point(232, 105);
+            this.BirthdayPicker.Location = new System.Drawing.Point(261, 131);
+            this.BirthdayPicker.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.BirthdayPicker.Name = "BirthdayPicker";
-            this.BirthdayPicker.Size = new System.Drawing.Size(455, 26);
+            this.BirthdayPicker.Size = new System.Drawing.Size(511, 30);
             this.BirthdayPicker.TabIndex = 6;
             // 
             // ProgramComboBox
             // 
+            this.ProgramComboBox.DisplayMember = "MA_CTDT";
             this.ProgramComboBox.FormattingEnabled = true;
-            this.ProgramComboBox.Location = new System.Drawing.Point(328, 324);
+            this.ProgramComboBox.Location = new System.Drawing.Point(369, 405);
+            this.ProgramComboBox.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.ProgramComboBox.Name = "ProgramComboBox";
-            this.ProgramComboBox.Size = new System.Drawing.Size(359, 24);
+            this.ProgramComboBox.Size = new System.Drawing.Size(403, 28);
             this.ProgramComboBox.TabIndex = 7;
+            this.ProgramComboBox.ValueMember = "MA_CTDT";
             // 
             // EnrolButton
             // 
-            this.EnrolButton.Location = new System.Drawing.Point(562, 395);
+            this.EnrolButton.Location = new System.Drawing.Point(632, 494);
+            this.EnrolButton.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.EnrolButton.Name = "EnrolButton";
-            this.EnrolButton.Size = new System.Drawing.Size(125, 50);
+            this.EnrolButton.Size = new System.Drawing.Size(141, 62);
             this.EnrolButton.TabIndex = 8;
             this.EnrolButton.Text = "Ghi danh";
             this.EnrolButton.UseVisualStyleBackColor = true;
@@ -127,26 +135,27 @@ namespace EducationalCenter_Demo
             // PhoneTextBox
             // 
             this.PhoneTextBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.PhoneTextBox.Location = new System.Drawing.Point(232, 251);
+            this.PhoneTextBox.Location = new System.Drawing.Point(261, 314);
+            this.PhoneTextBox.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.PhoneTextBox.Name = "PhoneTextBox";
-            this.PhoneTextBox.Size = new System.Drawing.Size(455, 26);
+            this.PhoneTextBox.Size = new System.Drawing.Size(511, 30);
             this.PhoneTextBox.TabIndex = 10;
             // 
             // label5
             // 
             this.label5.AutoSize = true;
             this.label5.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label5.Location = new System.Drawing.Point(87, 254);
+            this.label5.Location = new System.Drawing.Point(98, 318);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(111, 20);
+            this.label5.Size = new System.Drawing.Size(132, 25);
             this.label5.TabIndex = 9;
             this.label5.Text = "Số điện thoại:";
             // 
             // EnrolStudentWindow
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(782, 483);
+            this.ClientSize = new System.Drawing.Size(880, 604);
             this.Controls.Add(this.PhoneTextBox);
             this.Controls.Add(this.label5);
             this.Controls.Add(this.EnrolButton);
@@ -158,10 +167,11 @@ namespace EducationalCenter_Demo
             this.Controls.Add(this.label3);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
+            this.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.MaximizeBox = false;
             this.Name = "EnrolStudentWindow";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterParent;
-            this.Text = "Ghi danh học viên";
+            this.Text = "Ghi danh học viên";            
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -180,5 +190,8 @@ namespace EducationalCenter_Demo
         private System.Windows.Forms.Button EnrolButton;
         private System.Windows.Forms.TextBox PhoneTextBox;
         private System.Windows.Forms.Label label5;
+        
+        
+        
     }
 }

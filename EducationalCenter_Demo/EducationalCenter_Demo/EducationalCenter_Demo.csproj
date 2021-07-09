@@ -46,6 +46,18 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="EnrollClassWindow.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="EnrollClassWindow.Designer.cs">
+      <DependentUpon>EnrollClassWindow.cs</DependentUpon>
+    </Compile>
+    <Compile Include="EnrollResult.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="EnrollResult.Designer.cs">
+      <DependentUpon>EnrollResult.cs</DependentUpon>
+    </Compile>
     <Compile Include="EnrolStudentWindow.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -66,6 +78,18 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="StudentView.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="StudentView.Designer.cs">
+      <DependentUpon>StudentView.cs</DependentUpon>
+    </Compile>
+    <EmbeddedResource Include="EnrollClassWindow.resx">
+      <DependentUpon>EnrollClassWindow.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="EnrollResult.resx">
+      <DependentUpon>EnrollResult.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="EnrolStudentWindow.resx">
       <DependentUpon>EnrolStudentWindow.cs</DependentUpon>
     </EmbeddedResource>
@@ -84,6 +108,9 @@
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
     </Compile>
+    <EmbeddedResource Include="StudentView.resx">
+      <DependentUpon>StudentView.cs</DependentUpon>
+    </EmbeddedResource>
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>

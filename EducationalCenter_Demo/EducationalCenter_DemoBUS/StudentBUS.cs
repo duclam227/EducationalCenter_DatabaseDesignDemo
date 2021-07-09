@@ -76,16 +76,15 @@ namespace EducationalCenter_DemoBUS
 
         public static void AddStudent(StudentDTO newStudent)
         {
-            newStudent.ID = "HV0" + (GetStudentAmount() + 1).ToString();
+            if(GetStudentAmount() + 1 < 10)
+                newStudent.ID = "HV0" + (GetStudentAmount() + 1).ToString();
+            else
+                newStudent.ID = "HV" + (GetStudentAmount() + 1).ToString();
 
-            try
-            {
-                EducationalCenter_DemoDAO.StudentDAO.AddStudent(newStudent);
-            }
-            catch(Exception ex)
-            {
-                throw ex;
-            }
+            
+            
+            EducationalCenter_DemoDAO.StudentDAO.AddStudent(newStudent);
+            
 
         }
 
@@ -120,6 +119,14 @@ namespace EducationalCenter_DemoBUS
                 throw (ex);
             }
 
+            return result;
+        }
+
+        public static string GetStudentProgram (StudentDTO _id)
+        {
+            string result;
+            DataTable dt = EducationalCenter_DemoDAO.StudentDAO.GetStudentProgram(_id);
+            result = dt.Rows[0][0].ToString();
             return result;
         }
     }

@@ -50,9 +50,11 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="ClassDAO.cs" />
     <Compile Include="DBConnect.cs" />
     <Compile Include="ProgramDAO.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="RegistrationDAO.cs" />
     <Compile Include="StudentDAO.cs" />
     <Compile Include="UserDAO.cs" />
     <EmbeddedResource Include="Properties\Resources.resx">

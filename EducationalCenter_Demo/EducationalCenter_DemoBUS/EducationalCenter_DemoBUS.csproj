@@ -49,8 +49,10 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="ClassBUS.cs" />
     <Compile Include="ProgramBUS.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="RegistrationBUS.cs" />
     <Compile Include="StudentBUS.cs" />
     <Compile Include="UserBUS.cs" />
     <EmbeddedResource Include="Properties\Resources.resx">
