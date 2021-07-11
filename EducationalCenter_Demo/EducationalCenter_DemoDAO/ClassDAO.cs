@@ -41,21 +41,44 @@ namespace EducationalCenter_DemoDAO
             }
         }
 
-        public static void CancelClass (string _regisID, string _classID)
+
+        public static DataTable GetAllClasses(string _subjectID)
         {
+            DataTable result = new DataTable();
+            string query = $"select * from LOPHOC WHERE MAMH = '{_subjectID}'";
+
+
             try
             {
-                string command = $"EXEC CANCEL_CLASS '{_regisID}', '{_classID}'";
-
-                _conn.Open();
-                SqlCommand cmd = new SqlCommand(command, _conn);
-                cmd.ExecuteNonQuery();
-                _conn.Close();
+                SqlDataAdapter adapter = new SqlDataAdapter(query, _conn);
+                adapter.Fill(result);
             }
-            catch (Exception)
+            catch (Exception ex)
             {
-                _conn.Close();
+                throw ex;
+            }
+
+            return result;
+        }
+
+
+    
+
+        public static void CancelClass (string _regisID, string _classID)
+            {
+                try
+                {
+                    string command = $"EXEC CANCEL_CLASS '{_regisID}', '{_classID}'";
+
+                    _conn.Open();
+                    SqlCommand cmd = new SqlCommand(command, _conn);
+                    cmd.ExecuteNonQuery();
+                    _conn.Close();
+                }
+                catch (Exception)
+                {
+                    _conn.Close();
+                }
             }
         }
-    }
 }

@@ -1,0 +1,8 @@
+C:\Users\khoaf\Documents\Academic\Junior 2nd\PTTK\Thực hành\EducationalCenter_DatabaseDesignDemo\EducationalCenter_Demo\EducationalCenter_DemoDTO\bin\Debug\EducationalCenter_DemoDTO.dll
+C:\Users\khoaf\Documents\Academic\Junior 2nd\PTTK\Thực hành\EducationalCenter_DatabaseDesignDemo\EducationalCenter_Demo\EducationalCenter_DemoDTO\bin\Debug\EducationalCenter_DemoDTO.pdb
+C:\Users\khoaf\Documents\Academic\Junior 2nd\PTTK\Thực hành\EducationalCenter_DatabaseDesignDemo\EducationalCenter_Demo\EducationalCenter_DemoDTO\obj\Debug\EducationalCenter_DemoDTO.csproj.AssemblyReference.cache
+C:\Users\khoaf\Documents\Academic\Junior 2nd\PTTK\Thực hành\EducationalCenter_DatabaseDesignDemo\EducationalCenter_Demo\EducationalCenter_DemoDTO\obj\Debug\EducationalCenter_DemoDTO.Properties.Resources.resources
+C:\Users\khoaf\Documents\Academic\Junior 2nd\PTTK\Thực hành\EducationalCenter_DatabaseDesignDemo\EducationalCenter_Demo\EducationalCenter_DemoDTO\obj\Debug\EducationalCenter_DemoDTO.csproj.GenerateResource.cache
+C:\Users\khoaf\Documents\Academic\Junior 2nd\PTTK\Thực hành\EducationalCenter_DatabaseDesignDemo\EducationalCenter_Demo\EducationalCenter_DemoDTO\obj\Debug\EducationalCenter_DemoDTO.csproj.CoreCompileInputs.cache
+C:\Users\khoaf\Documents\Academic\Junior 2nd\PTTK\Thực hành\EducationalCenter_DatabaseDesignDemo\EducationalCenter_Demo\EducationalCenter_DemoDTO\obj\Debug\EducationalCenter_DemoDTO.dll
+C:\Users\khoaf\Documents\Academic\Junior 2nd\PTTK\Thực hành\EducationalCenter_DatabaseDesignDemo\EducationalCenter_Demo\EducationalCenter_DemoDTO\obj\Debug\EducationalCenter_DemoDTO.pdb

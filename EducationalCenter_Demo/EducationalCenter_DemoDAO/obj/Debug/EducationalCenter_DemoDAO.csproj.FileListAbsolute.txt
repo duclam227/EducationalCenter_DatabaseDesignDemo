@@ -1,0 +1,11 @@
+C:\Users\khoaf\Documents\Academic\Junior 2nd\PTTK\Thực hành\EducationalCenter_DatabaseDesignDemo\EducationalCenter_Demo\EducationalCenter_DemoDAO\bin\Debug\EducationalCenter_DemoDAO.dll
+C:\Users\khoaf\Documents\Academic\Junior 2nd\PTTK\Thực hành\EducationalCenter_DatabaseDesignDemo\EducationalCenter_Demo\EducationalCenter_DemoDAO\bin\Debug\EducationalCenter_DemoDAO.pdb
+C:\Users\khoaf\Documents\Academic\Junior 2nd\PTTK\Thực hành\EducationalCenter_DatabaseDesignDemo\EducationalCenter_Demo\EducationalCenter_DemoDAO\bin\Debug\EducationalCenter_DemoDTO.dll
+C:\Users\khoaf\Documents\Academic\Junior 2nd\PTTK\Thực hành\EducationalCenter_DatabaseDesignDemo\EducationalCenter_Demo\EducationalCenter_DemoDAO\bin\Debug\EducationalCenter_DemoDTO.pdb
+C:\Users\khoaf\Documents\Academic\Junior 2nd\PTTK\Thực hành\EducationalCenter_DatabaseDesignDemo\EducationalCenter_Demo\EducationalCenter_DemoDAO\obj\Debug\EducationalCenter_DemoDAO.csproj.AssemblyReference.cache
+C:\Users\khoaf\Documents\Academic\Junior 2nd\PTTK\Thực hành\EducationalCenter_DatabaseDesignDemo\EducationalCenter_Demo\EducationalCenter_DemoDAO\obj\Debug\EducationalCenter_DemoDAO.Properties.Resources.resources
+C:\Users\khoaf\Documents\Academic\Junior 2nd\PTTK\Thực hành\EducationalCenter_DatabaseDesignDemo\EducationalCenter_Demo\EducationalCenter_DemoDAO\obj\Debug\EducationalCenter_DemoDAO.csproj.GenerateResource.cache
+C:\Users\khoaf\Documents\Academic\Junior 2nd\PTTK\Thực hành\EducationalCenter_DatabaseDesignDemo\EducationalCenter_Demo\EducationalCenter_DemoDAO\obj\Debug\EducationalCenter_DemoDAO.csproj.CoreCompileInputs.cache
+C:\Users\khoaf\Documents\Academic\Junior 2nd\PTTK\Thực hành\EducationalCenter_DatabaseDesignDemo\EducationalCenter_Demo\EducationalCenter_DemoDAO\obj\Debug\EducationalCenter_DemoDAO.csproj.CopyComplete
+C:\Users\khoaf\Documents\Academic\Junior 2nd\PTTK\Thực hành\EducationalCenter_DatabaseDesignDemo\EducationalCenter_Demo\EducationalCenter_DemoDAO\obj\Debug\EducationalCenter_DemoDAO.dll
+C:\Users\khoaf\Documents\Academic\Junior 2nd\PTTK\Thực hành\EducationalCenter_DatabaseDesignDemo\EducationalCenter_Demo\EducationalCenter_DemoDAO\obj\Debug\EducationalCenter_DemoDAO.pdb
