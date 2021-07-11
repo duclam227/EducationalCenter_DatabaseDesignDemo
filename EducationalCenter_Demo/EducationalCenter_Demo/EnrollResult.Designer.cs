@@ -36,20 +36,23 @@ namespace EducationalCenter_Demo
             // grv_EnrollResult
             // 
             this.grv_EnrollResult.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.grv_EnrollResult.Location = new System.Drawing.Point(12, 50);
+            this.grv_EnrollResult.Location = new System.Drawing.Point(12, 11);
+            this.grv_EnrollResult.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.grv_EnrollResult.Name = "grv_EnrollResult";
             this.grv_EnrollResult.RowHeadersWidth = 62;
             this.grv_EnrollResult.RowTemplate.Height = 28;
-            this.grv_EnrollResult.Size = new System.Drawing.Size(1039, 502);
+            this.grv_EnrollResult.Size = new System.Drawing.Size(859, 431);
             this.grv_EnrollResult.TabIndex = 0;
             // 
             // EnrollResult
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1063, 576);
+            this.ClientSize = new System.Drawing.Size(882, 453);
             this.Controls.Add(this.grv_EnrollResult);
+            this.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.Name = "EnrollResult";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Kết quả đăng ký học phần";
             ((System.ComponentModel.ISupportInitialize)(this.grv_EnrollResult)).EndInit();
             this.ResumeLayout(false);

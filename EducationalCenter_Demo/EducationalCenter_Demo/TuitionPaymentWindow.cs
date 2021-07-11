@@ -44,13 +44,13 @@ namespace EducationalCenter_Demo
             }
             catch (Exception ex)
             {
-                MessageBox.Show(ex.Message + " Hoặc Mã Học Viên Không Hợp Lệ");
+                MessageBox.Show(ex.Message + " hoặc mã học viên không hợp lệ");
                 return;
             }
 
             if(MAPDK == null)
             {
-                MessageBox.Show("Không Có Phiếu Đăng Ký ", MAPDK);
+                MessageBox.Show("Không có phiếu đăng ký ", MAPDK);
                 return;
             }
 
@@ -61,7 +61,7 @@ namespace EducationalCenter_Demo
 
             dataGridView_PDK.DataSource = EducationalCenter_DemoBUS.RegistrationBUS.RegistrationDetail(MAPDK);
 
-            TongHocPhi_TextBox.Text = "Tổng Học Phí Là: " + _totalTuition;
+            TongHocPhi_TextBox.Text = "Tổng học phí: " + _totalTuition;
         }
 
         private void XacNhanDongHocPhi_Button_Click(object sender, EventArgs e)
@@ -79,11 +79,11 @@ namespace EducationalCenter_Demo
 
                 if (isPosted == 1)
                 {
-                    MessageBox.Show("Đã Thanh Toán Thành Công");
+                    MessageBox.Show("Đã thanh toán thành công");
                 }
                 else if (isPosted == 0)
                 {
-                    MessageBox.Show("Hóa Đơn Này Đã Thanh Toán Trước Đó");
+                    MessageBox.Show("Hóa đơn này đã thanh toán trước đó");
                 }
             }
             catch(Exception ex)

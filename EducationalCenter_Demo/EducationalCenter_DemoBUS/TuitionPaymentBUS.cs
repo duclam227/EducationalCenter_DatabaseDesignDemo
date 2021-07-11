@@ -44,7 +44,8 @@ namespace EducationalCenter_DemoBUS
             }
             catch(Exception ex)
             {
-                return -1;
+                throw ex;
+                //return -1;
             }
         }
     }

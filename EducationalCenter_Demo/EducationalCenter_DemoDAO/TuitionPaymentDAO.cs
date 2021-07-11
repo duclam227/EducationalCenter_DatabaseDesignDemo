@@ -61,7 +61,7 @@ namespace EducationalCenter_DemoDAO
             catch (Exception ex)
             {
                 _conn.Close();
-                //throw ex;
+                throw ex;
             }
         }
 
