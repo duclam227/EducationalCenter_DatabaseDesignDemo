@@ -55,8 +55,9 @@
     <Compile Include="ProgramDAO.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="RegistrationDAO.cs" />
+    <Compile Include="ScheduleDAO.cs" />
     <Compile Include="StudentDAO.cs" />
-    <Compile Include="TuitionPaymentDAO.cs" />
+    <Compile Include="SubjectDAO.cs" />
     <Compile Include="UserDAO.cs" />
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>

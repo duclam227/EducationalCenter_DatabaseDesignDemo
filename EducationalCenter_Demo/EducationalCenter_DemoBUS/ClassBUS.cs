@@ -50,6 +50,29 @@ namespace EducationalCenter_DemoBUS
             return result;
         }
 
+        public static List<ClassDTO> GetAllClasses(string _subjectID)
+        {
+            List<ClassDTO> result = new List<ClassDTO>();
+
+            try
+            {
+                DataTable data = EducationalCenter_DemoDAO.ClassDAO.GetAllClasses(_subjectID);
+                foreach (DataRow row in data.Rows)
+                {
+                    ClassDTO tmp = new ClassDTO();
+                    tmp.IDClass = row["MALOP"].ToString();
+
+                    result.Add(tmp);
+                }
+            }
+            catch (Exception ex)
+            {
+                throw ex;
+            }
+
+            return result;
+        }
+    
         public static void EnrollClass (string _regisID, string _classID)
         {
             try
