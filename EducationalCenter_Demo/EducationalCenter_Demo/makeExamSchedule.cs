@@ -25,7 +25,7 @@ namespace EducationalCenter_Demo
         private void button1_Click(object sender, EventArgs e)
         {
             ScheduleDTO newSchedule = new ScheduleDTO();
-            string _classID = comboClass.SelectedValue.ToString();
+            string _classID = "";
             DateTime _date = dateTimePicker.Value;
             string _examType = (GK.Checked ? "GK" : "CK");
             string _roomID = textRoom.Text;
@@ -55,6 +55,8 @@ namespace EducationalCenter_Demo
                 MessageBox.Show("Bạn chưa chọn lớp");
                 return;
             }
+
+            _classID = comboClass.SelectedValue.ToString();
 
 
             newSchedule.IDClass = _classID;
@@ -90,6 +92,10 @@ namespace EducationalCenter_Demo
 
         }
 
-
+        private void button1_Click_1(object sender, EventArgs e)
+        {
+            ExamScheduleForm schedule = new ExamScheduleForm();
+            schedule.Show();
+        }
     }
 }

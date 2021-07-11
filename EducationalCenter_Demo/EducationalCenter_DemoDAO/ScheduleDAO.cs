@@ -31,5 +31,23 @@ namespace EducationalCenter_DemoDAO
             }
         }
 
+        public static DataTable GetAll()
+        {
+            DataTable result = new DataTable();
+            string command = "select * from LICHTHI_MONHOC";
+            try
+            {
+                _conn.Open();
+                SqlDataAdapter adapter = new SqlDataAdapter(command, _conn);
+                adapter.Fill(result);
+                _conn.Close();
+            }
+            catch (Exception ex)
+            {
+                throw ex;
+            }
+
+            return result;
+        }
     }
 }

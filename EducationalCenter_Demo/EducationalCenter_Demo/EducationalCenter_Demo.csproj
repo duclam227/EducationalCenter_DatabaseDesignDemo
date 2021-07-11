@@ -46,6 +46,12 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="EmployeeMainForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="EmployeeMainForm.Designer.cs">
+      <DependentUpon>EmployeeMainForm.cs</DependentUpon>
+    </Compile>
     <Compile Include="EnrollClassWindow.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -63,6 +69,12 @@
     </Compile>
     <Compile Include="EnrolStudentWindow.Designer.cs">
       <DependentUpon>EnrolStudentWindow.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ExamScheduleForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ExamScheduleForm.Designer.cs">
+      <DependentUpon>ExamScheduleForm.cs</DependentUpon>
     </Compile>
     <Compile Include="ForgotPasswordWindow.cs">
       <SubType>Form</SubType>
@@ -96,6 +108,9 @@
     <Compile Include="TuitionPaymentWindow.Designer.cs">
       <DependentUpon>TuitionPaymentWindow.cs</DependentUpon>
     </Compile>
+    <EmbeddedResource Include="EmployeeMainForm.resx">
+      <DependentUpon>EmployeeMainForm.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="EnrollClassWindow.resx">
       <DependentUpon>EnrollClassWindow.cs</DependentUpon>
     </EmbeddedResource>
@@ -104,6 +119,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="EnrolStudentWindow.resx">
       <DependentUpon>EnrolStudentWindow.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ExamScheduleForm.resx">
+      <DependentUpon>ExamScheduleForm.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="ForgotPasswordWindow.resx">
       <DependentUpon>ForgotPasswordWindow.cs</DependentUpon>

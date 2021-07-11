@@ -62,8 +62,10 @@ namespace EducationalCenter_Demo
                                 {
                                     case "NV":
                                         {
-                                            EnrolStudentWindow enrol = new EnrolStudentWindow();
-                                            enrol.ShowDialog(this);
+                                            EmployeeMainForm employeeMain = new EmployeeMainForm();
+                                            //EnrolStudentWindow enrol = new EnrolStudentWindow();
+                                            //makeExamSchedule enrol = new makeExamSchedule();
+                                            employeeMain.ShowDialog(this);
                                             this.Show();
                                             return;
                                         }
