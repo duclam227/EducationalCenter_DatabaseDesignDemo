@@ -50,7 +50,7 @@ namespace EducationalCenter_Demo
 
 
 
-            if ( comboClass.SelectedValue.ToString().Length == 0)
+            if ( comboClass.SelectedValue == null ||  comboClass.SelectedValue.ToString().Length == 0 )
             {
                 MessageBox.Show("Bạn chưa chọn lớp");
                 return;
@@ -64,12 +64,22 @@ namespace EducationalCenter_Demo
             newSchedule.ExamType = _examType;
             newSchedule.RoomID = _roomID;
             newSchedule.ShiftNumber = _shiftNumber;
+
+            bool existedSchedule = EducationalCenter_DemoBUS.ScheduleBUS.checkExistedSchedule(newSchedule.IDClass, newSchedule.ExamType);
+
+            if (existedSchedule)
+            {
+                MessageBox.Show("Lịch thi đã tồn tại");
+                return;
+            }
             try
             {
                 EducationalCenter_DemoBUS.ScheduleBUS.AddSchedule(newSchedule);
+                MessageBox.Show("Thành công!");
             } catch (Exception ex)
             {
                 MessageBox.Show(ex.Message);
+                return;
             }
         }
 

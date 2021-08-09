@@ -12,6 +12,7 @@ namespace EducationalCenter_DemoBUS
     {
         public static void AddSchedule (ScheduleDTO newSchedule)
         {
+
             EducationalCenter_DemoDAO.ScheduleDAO.AddSchedule(newSchedule);                           
         }
 
@@ -42,6 +43,16 @@ namespace EducationalCenter_DemoBUS
             }
 
             return result;
+        }
+
+        public static bool checkExistedSchedule(string iDClass, string examType)
+        {
+            DataTable schedule = EducationalCenter_DemoDAO.ScheduleDAO.GetSchedule(iDClass, examType);
+
+            if (schedule == null || schedule.Rows.Count == 0)
+                return false;
+
+            return true;
         }
     }
 }

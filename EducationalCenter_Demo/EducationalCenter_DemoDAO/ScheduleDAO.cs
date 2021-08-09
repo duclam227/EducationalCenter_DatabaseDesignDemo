@@ -49,5 +49,23 @@ namespace EducationalCenter_DemoDAO
 
             return result;
         }
+
+        public static DataTable GetSchedule(string iDClass, string examType)
+        {
+            DataTable result = new DataTable();
+            string command = $"select * from LICHTHI_MONHOC where MALOPHOC='{iDClass}' and PHANLOAI='{examType}' ";
+            try
+            {
+                _conn.Open();
+                SqlDataAdapter adapter = new SqlDataAdapter(command, _conn);
+                adapter.Fill(result);
+                _conn.Close();
+            }
+            catch (Exception ex)
+            {
+                throw ex;
+            }
+            return result;
+        }
     }
 }
